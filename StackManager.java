@@ -1,13 +1,9 @@
 import java.lang.*;
-
 public class StackManager {
-
     Node head;
     Node tail;
-
-
+    
     public void push(String name){//insert head
-
         Node node = new Node(name);
         if (head == null){
             head = node;
@@ -17,9 +13,7 @@ public class StackManager {
             head = node;
         }
         System.out.println("Push: " + "'"+ head.name + "'");
-
     }
-
 
     public String pop(){
         String pop = "";
@@ -32,31 +26,20 @@ public class StackManager {
         }
         System.out.println("Pop: " + "'"+ pop + "'");
         return pop;
-
-
     }
-
-
-
-
+    
     public void display(){
         Node temp = head;
         System.out.println("--------Stack List---------");
         while(temp != null){
-
             System.out.print("'"+ temp.name + "'" +  " " );
             temp = temp.next;
         }
         System.out.println();
-
-
     }
 
     public static void main(String[] args) {
-
-
         StackManager stack = new StackManager();
-
         stack.push("to");
         stack.push("be");
         stack.push("or");
@@ -90,16 +73,5 @@ public class StackManager {
 
         stack.push("is");
         stack.display();
-
-
     }
-
-
-
-
-
-
-
-
-
 }
